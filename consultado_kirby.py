@@ -1,4 +1,4 @@
-print("Kirby G. Consultado")
-print("September 9, 2005")
-print("Male")
-print("kirbyconsultado@gmail.com")
+print("Name: Kirby G. Consultado")
+print("Birthday: September 9, 2005")
+print("Gender: Male")
+print("Email: kirbyconsultado@gmail.com")
