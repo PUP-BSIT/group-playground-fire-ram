@@ -3,4 +3,3 @@ print ("Birhday: January 1, 2005")
 print ("Gender: Male")
 print ("Email: piadozoedriane@gmail.com")
 
-print("Hello Edriane, welcome to the team -kevin")
