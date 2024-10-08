@@ -4,3 +4,4 @@ print("Gender: Male")
 print("Email: generandaya4@gmail.com")
 
 print("Hi Gener, Welcome to our Team - Marc ")
+print("Hi Gener, I am glad to work with you. - Kirby")
