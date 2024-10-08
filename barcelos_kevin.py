@@ -3,4 +3,5 @@ print("Birthday: February 18. 2005")
 print("Gender: Male")
 print("Email: barceloskevinjoseph2gmail.com")
 
-print("Hello Gener welcome to the team -kevin")
+print("Hi Kevin, Welcome to our Team - Marc ")
+
