@@ -1,3 +1,4 @@
+import os
 #INSTRUCTIONS
 """
 Create a file called main.py. The program will ask the user for the following order details:
@@ -30,3 +31,18 @@ Member 4: @Jay-ar Andaya
 Member 5: @Kevin Barcelos
 
 """
+#Marc
+def order_details():
+    pass
+#Kirby
+def costumer_detail():
+    pass
+#Edriane
+def total_and_senior_discount():
+    pass
+#Gener
+def order_summary():
+    pass
+#Kevin
+def main():
+    pass
