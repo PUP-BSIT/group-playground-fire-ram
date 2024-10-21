@@ -20,10 +20,12 @@ f. Senior ID No.
 g. Grand Total
 
 # Member 1: Function to gather order details.
+
 # Member 2: Function to get customer details.
-# Member 3: Function to calculate the total of the orders.
-# Member 4: Function to apply senior discount.
+
+# Member 4: Function to calculate the total of the orders. Function to apply senior discount.
 # Member 5: Function to display order summary.
+# Member 3: Main function to coordinate the process
 
 Member 1: @Marc Veslino
 Member 2: @Kirby Consultado
@@ -141,16 +143,6 @@ match choice:
     case _:
         print ("Invalid choice")
 
-"""
-#Kirby is working.
 
-os.system ('cls')
-customer_name = input(print("Enter the customer's name: "))
-senior_ID_no = int(input("Enter Senior ID Number: "))
-
-if senior_ID_no == True:
-    pass # Compute for senior discount.
-else:
-    pass # Don't receive a senior discount.
-    
-"""
+def senior_discount ():
+    pass
