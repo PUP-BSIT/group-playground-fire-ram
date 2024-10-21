@@ -31,9 +31,23 @@ Member 4: @Jay-ar Andaya
 Member 5: @Kevin Barcelos
 
 """
-#Marc
-def order_details():
-    pass
+#Member 1: @Marc Veslino
+def add_order():
+    orders = []
+    while True:
+        product_name = input("Product name: ")
+        price = float(input("Price: "))
+        quantity = int(input("Quantity: "))
+        orders.append({
+            "product_name": product_name,
+            "price": price,
+            "quantity": quantity,
+            "total": price * quantity
+        })
+        if input("Add another item? (y/n): ").lower() != 'y':
+            break
+    return orders
+
 #Kirby & Edriane
 def costumer_detail():
     pass
@@ -43,3 +57,5 @@ def order_summary():
 #Kevin
 def main():
     pass
+
+
