@@ -49,13 +49,12 @@ def add_order():
     return orders
 
 #Kirby & Edriane
-def costumer_detail():
-    pass
+def customer_detail():
+    customer_name = input("Enter the your name: ")
+    senior_ID_no = int(input("Enter your Senior ID number: "))
 #Gener
 def order_summary():
     pass
 #Kevin
 def main():
     pass
-
-
