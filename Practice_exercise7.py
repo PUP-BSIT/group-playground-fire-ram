@@ -34,11 +34,8 @@ Member 5: @Kevin Barcelos
 #Marc
 def order_details():
     pass
-#Kirby
+#Kirby & Edriane
 def costumer_detail():
-    pass
-#Edriane
-def total_and_senior_discount():
     pass
 #Gener
 def order_summary():
