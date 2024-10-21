@@ -142,6 +142,15 @@ match choice:
         print ("Invalid choice")
 
 """
-Kirby is working.
+#Kirby is working.
 
+os.system ('cls')
+customer_name = input(print("Enter the customer's name: "))
+senior_ID_no = int(input("Enter Senior ID Number: "))
+
+if senior_ID_no == True:
+    pass # Compute for senior discount.
+else:
+    pass # Don't receive a senior discount.
+    
 """
