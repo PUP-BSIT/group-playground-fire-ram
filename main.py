@@ -46,15 +46,20 @@ price_of_items_luckyme [2] = 12
 list_of_order = []
 
 
-def list_of_order (prod_wants, num_of_items):
+def list_of_order_nescafe(prod_wants, num_of_items):
 
     if prod_wants == "1":
         print(f"The Items in nescafe: {list_of_product_nescafe}")
         print (f"The price of the item in nescafe ₱ {price_of_items_nescafe}")
 
     for num in range (0, num_of_items):
-        item_ordered = int (input("Enter the items you want to order: "))
+        item_ordered = int (input(f"Enter the items you want to order {num + 1}: "))
         list_of_order.append (item_ordered)
+
+    for num in list_of_order:
+        if 0 <= num or 0 < len(list_of_product_nescafe):
+            value = list_of_product_nescafe[num]
+            print (f"The product in the index number: {num} is: {value}")
     
 
 os.system ('cls')
@@ -109,10 +114,13 @@ match choice:
 
         match choice_c:
             case "a":
-                os.system('cls')
+                print ("1. For nescafe items")
+                print ("2. For rebisco items")
+                print ("3. For luckyme items")
                 choice_of_prod = input("Enter the choice of product: ")
                 quantity_of_items = int(input("Enter the quantity of your item: "))
-                list_of_order(choice_of_prod, quantity_of_items)
-
+                list_of_order_nescafe(choice_of_prod, quantity_of_items)
+            case "b":
+                print ()
     case _:
         print ("Invalid choice")
