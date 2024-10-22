@@ -11,14 +11,14 @@ def get_order_details():
 
     while True:
         name = input("Enter product name: ")
-        prize_1 = float(input("Enter price: "))
+        price_1 = float(input("Enter price: "))
         number_of_items = int(input("Enter quantity: "))
-        total_prize = prize_1 * number_of_items
+        total_price = price_1 * number_of_items
                         #KEY : VALUE
         product_name.append(name)
-        price.append(prize_1)
+        price.append(price_1)
         quantity.append(number_of_items)
-        total.append(total_prize)
+        total.append(total_price)
         
         # TODO: Member 2 - Ask user if they want to add another item
         more_items = input("Do you want to add another item? (y/n): ")
@@ -47,14 +47,10 @@ def display_receipt(product_name, price, quantity, total, customer_name, senior_
     if senior_id:
         print(f"Senior ID: {senior_id}")
     print("\nItems:")
-    for product in product_name:
-        print(f"{product}" )
-    for pric in price:
-        print(f"{pric}")
-    for quantit in quantity:
-        print(f"{quantit}")
-    for tot in total:
-        print(f"{tot}")
+     # Iterate using range, accessing list items by index
+    for index in range(len(product_name)):
+        print(f"{product_name[index]} - Price: {price[index]}, Quantity: {quantity[index]}, Total: {total[index]}")
+    
     print(f"\nGrand Total: {grand_total:.2f}")
 
 # TODO: Member 5 - Main function to coordinate the process

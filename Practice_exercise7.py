@@ -31,6 +31,7 @@ Member 4: @Jay-ar Andaya
 Member 5: @Kevin Barcelos
 
 """
+
 #Member 1: @Marc Veslino
 def add_order():
     orders = []
@@ -49,12 +50,19 @@ def add_order():
     return orders
 
 #Kirby & Edriane
-def customer_detail():
+def customer_detail(total):
+    
+    
     customer_name = input("Enter the your name: ")
     senior_ID_no = int(input("Enter your Senior ID number: "))
+
+    
 #Gener
 def order_summary():
     pass
 #Kevin
 def main():
     pass
+
+orders = add_order()
+customer_detail (total)
