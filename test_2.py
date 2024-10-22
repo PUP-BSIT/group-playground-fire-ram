@@ -1,7 +1,8 @@
 import os 
+
+
+
 # TODO: Member 1 - Function to get product details
-
-
 def get_order_details():
     os.system('cls')
     product_name = []
@@ -27,14 +28,13 @@ def get_order_details():
             break
     return product_name, price, quantity, total
 
-# TODO: Member 3 - Function to get customer information and check for senior citizen
+# TODO: Member 2 and 3 - Function to get the customer's information and check for senior citizen discount if applicable.
 def get_customer_info():
     customer_name = input("Enter customer name: ")
     senior_id = input("Enter senior ID (leave blank if not a senior citizen): ")
     return customer_name, senior_id
 
-# TODO: Member 3 - Function to calculate discount if applicable
-def apply_discount(grand_total, senior_id):
+def apply_discount(grand_total, senior_id): # Function to calculate the discount if applicable.
     if senior_id:
         return grand_total * 0.9  # 10% discount
     return grand_total
