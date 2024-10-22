@@ -28,12 +28,14 @@ g. Grand Total
 # Member 3: Main function to coordinate the process
 
 Member 1: @Marc Veslino
+
 Member 2: @Kirby Consultado
 Member 3: @Piadozo Edriane
 Member 4: @Kevin Barcelos
 Member 5: @Jay-ar Andaya
 
 """
+
 list_of_product = ["Nescafe", "Rebisco", "Lucky Me"]
 
 
