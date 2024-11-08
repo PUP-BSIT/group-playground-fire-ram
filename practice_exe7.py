@@ -2,11 +2,10 @@ import os
 
 prod_name = []
 prod_price = []
-prod_price = list
-
+total = []
 
 def order_details():
-    total_order = []
+    
     grand_total_order = []
     
     while True:
@@ -16,7 +15,13 @@ def order_details():
         price_of_prod = int (input("Enter the price of product: "))
         prod_price.append (price_of_prod)
         total_order = price_of_prod * quantity_product
-        grand_total_order = total_order + sum(prod_price)
+        total.append(total_order)
+
+        grand_total_order = 0
+        for value_in_total in total:
+             grand_total_order += value_in_total
+        
+        print (grand_total_order)
         continue_to_order =input("Enter y for continue n for no: ")
                     
         if continue_to_order == "n":
