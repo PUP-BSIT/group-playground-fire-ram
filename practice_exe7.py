@@ -2,37 +2,28 @@ import os
 
 prod_name = []
 prod_price = []
+prod_price = list
 
 
-def product_name():
-    quantity_product = 1
-
-    for num in range (0, quantity_product):
-
+def order_details():
+    total_order = []
+    grand_total_order = []
+    
+    while True:
         name_of_prod = input("Enter the name of the produt: ")
         prod_name.append(name_of_prod)
-
-    continue_to_order =input("Enter y for continue n for no: ")
-
-
-    if continue_to_order == "y":
-        quantity_product = 0
-        quantity_product = quantity_product + 1  
-        name_of_prod = str(input("Enter the name of the produt: "))
-        prod_name.append(name_of_prod)
-        
-    elif continue_to_order == "n":
-            print ("Proceed to the next step")
-
-
-    return " "
-def product_price ():
-
-    for num in prod_name:
-
-        price_of_prod = int(input("Enter the price of the product: "))
+        quantity_product =int(input("Enter the quantity of the product: "))
+        price_of_prod = int (input("Enter the price of product: "))
         prod_price.append (price_of_prod)
-
+        total_order = price_of_prod * quantity_product
+        grand_total_order = total_order + sum(prod_price)
+        continue_to_order =input("Enter y for continue n for no: ")
+                    
+        if continue_to_order == "n":
+                        break
+        
+    
+    print (f"The product: {prod_name} cost {prod_price}: {grand_total_order}")
     return " "
 
 def product_items ():
@@ -50,7 +41,7 @@ def customer_details (name_of_cus, customer_id):
 while True:
 
     os.system('cls')
-    print ("A. product")
+    print ("A. Order")
     print ("B. price")
     print ("C. Items")
     print ("")
@@ -62,12 +53,11 @@ while True:
     match choice:
         case "A":
             os.system('cls')
-            print (product_name())
+            print (order_details())
             input("Press enter to continue")
         case "B":
             os.system('cls')
-            print (product_price())
-            input("Press enter to continue")
+            print (" ")
         case "C":
             os.system('cls')
             print (product_items())
