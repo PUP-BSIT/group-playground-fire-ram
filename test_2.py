@@ -1,7 +1,5 @@
 import os 
 
-
-
 # TODO: Member 1 - Function to get product details
 def get_order_details():
     os.system('cls')
