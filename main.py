@@ -1,127 +1,61 @@
 import os
 
-"""
+def get_oder_details():
+    os.system("cls")
+    name = []
+    quantity = []
+    price = []
+    total = []
 
-Create a file called main.py. The program will ask the user for the following order details:
-a. Product Name
-b. Price
-c. Quantity
+    while True: 
+        product_name = input("Enter the product: ")
+        quant = int(input("Enter the quantity: "))
+        price_prod = float(input("Enter the price: "))
+        total_price = price_prod * quant
 
-After the last detail, it will ask if the user wants to add another item answerable by y for yes or n for no. If the user enters y, it will ask order details. Otherwise, it will proceed to the next step. After the orders are completed, the program will ask for the customer name and senior ID no.(blank if not senior citizen). If the customer is a senior citizen, a 10% discount will be deducted in the grand total. After that, the program will display the the following details:
+        name.append(product_name)
+        quantity.append(quant)
+        price.append(price_prod)
+        total.append(total_price)
 
-d. Items(product name, price, quantity, total)
-e. Customer Name
-f. Senior ID No.
-g. Grand Total
+        more_orders = input("Do you want to add more orders? (y/n): ")
+        if more_orders != 'y':
+            break
 
+    return name, quantity, price, total
 
-"""
-list_of_product = ["Nescafe", "Rebisco", "Lucky Me"]
+def get_costumer_details():
+    costumer_name = input("Costumer name: ")
+    senior_id = int(input("Senior id: "))
+    if senior_id:
+        return costumer_name, senior_id
+    return costumer_name, senior_id
 
+def senior_discount(senior_id, grand_total):
+    if senior_id:
+        grand_total = grand_total * 0.9
+        return grand_total 
+    return grand_total
 
-
-
-list_of_product_nescafe =  ["Nescafe Creamy white", "Nescafe Original", "Nescafe Classic"]
-price_of_items_nescafe = list_of_product_nescafe.copy()
-price_of_items_nescafe[0] = 15
-price_of_items_nescafe[1] = 15
-price_of_items_nescafe[2] = 15
-
-
-
-list_of_items_rebisco = ["Rebisco Honey butter", "Rebisco Butter", "Bravo"]
-price_of_items_rebisco = list_of_items_rebisco.copy()
-price_of_items_rebisco [0] = 7
-price_of_items_rebisco [1] = 8
-price_of_items_rebisco [2] = 9
-
-
-
-list_of_items_lucky_me = ["Chicken Noodles", "Beef Noodles", "Pork Noodles"]
-price_of_items_luckyme = list_of_items_lucky_me.copy()
-price_of_items_luckyme [0] = 10
-price_of_items_luckyme [1] = 12
-price_of_items_luckyme [2] = 12
-
-list_of_order = []
-
-
-def list_of_order_nescafe(prod_wants, num_of_items):
-
-    if prod_wants == "1":
-        print(f"The Items in nescafe: {list_of_product_nescafe}")
-        print (f"The price of the item in nescafe ₱ {price_of_items_nescafe}")
-
-    for num in range (0, num_of_items):
-        item_ordered = int (input(f"Enter the items you want to order {num + 1}: "))
-        list_of_order.append (item_ordered)
-
-    for num in list_of_order:
-        if 0 <= num or 0 < len(list_of_product_nescafe):
-            value = list_of_product_nescafe[num]
-            print (f"The product in the index number: {num} is: {value}")
-
-#def list_of_order_rebisco ():
+def display_receipt(name, quantity, price, total,costumer_name, senior_id, grand_total):
+    print("\nReceipt\n")
+    print(f"Name: {costumer_name}")
+    if senior_id:
+        print(f"Senior ID: {senior_id}")
     
+    print("\nItems\n")
+    for i in range(len(name)):
+        print(f"Name: {name[i]} - Price: {price[i]} - Quantity: {quantity[i]} - Total: {total[i]}")
 
-os.system ('cls')
-print ("a. Product name")
-print ("b. Price")
-print ("c. Quantity")
+    print(f"GRAND TOTAL: {grand_total}")
 
+#main
+name, quantity, price, total = get_oder_details()
+grand_total = 0.00
+for i in total:
+    grand_total = grand_total + i
+print(grand_total)
+costumer_name, senior_id = get_costumer_details()
+grand_total = senior_discount(senior_id, grand_total)
 
-choice = input("Enter your choice: ")
-
-match choice:
-    case "a":
-        os.system('cls')
-        print ("The available product in our store")
-        print (list_of_product)
-    case "b":
-        os.system('cls')
-        print ("Price of the product in the store")
-        print ("a. For the Nescafe ")
-        print ("b. For the Rebisco")
-        print ("c. For the Luckyme")
-    
-        choice_b = input("Enter your choice: ")
-
-        match choice_b:
-            case "a":
-
-                os.system('cls')
-                print(f"The Items in nescafe: {list_of_product_nescafe}")
-                print (f"The price of the item in nescafe ₱ {price_of_items_nescafe}")
-            case "b":
-
-                os.system ('cls')
-                print (f"The items in rebisco: {list_of_items_rebisco}")
-                print (f"The price of items in rebisco: ₱ {price_of_items_rebisco}")
-            case "c":
-                
-                os.system ('cls')
-                print (f"The items in Luckyme: {list_of_items_lucky_me}")
-                print (f"The price of items in lucky me: ₱ {price_of_items_luckyme} ")
-            case _:
-                print ("Invalid choice")
-
-
-    case "c":
-        os.system ('cls')
-        print ("a. For nescafe items")
-        print ("b. For rebisco items")
-        print ("c. For luckyme items")
-        choice_c = input("Enter your chosen product: ")
-
-        match choice_c:
-            case "a":
-                print ("1. For nescafe items")
-                print ("2. For rebisco items")
-                print ("3. For luckyme items")
-                choice_of_prod = input("Enter the choice of product: ")
-                quantity_of_items = int(input("Enter the quantity of your item: "))
-                list_of_order_nescafe(choice_of_prod, quantity_of_items)
-            case "b":
-                print ()
-    case _:
-        print ("Invalid choice")
+display_receipt(name, quantity, price, total,costumer_name, senior_id, grand_total)
