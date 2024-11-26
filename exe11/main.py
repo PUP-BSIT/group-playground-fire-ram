@@ -1,4 +1,4 @@
-from ourpackage import consultado, vesliño
+from ourpackage import consultado, vesliño, piadozo
 import os
 
 
@@ -43,7 +43,8 @@ while True:
             input("Press any key to continue.")
         case 3:
             os.system('cls')
-            pass
+            piadozo.calendar()
+            input("Press any key to continue.")
         case 4:
             os.system('cls')
             pass
