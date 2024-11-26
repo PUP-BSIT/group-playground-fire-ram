@@ -1,4 +1,4 @@
-from ourpackage import consultado
+from ourpackage import consultado, vesliño
 import os
 
 
@@ -37,7 +37,10 @@ while True:
             input("Press any key to continue.")
         case 2:
             os.system('cls')
-            pass
+            vesliño.add()
+            vesliño.subtract()
+            vesliño.multiply()
+            input("Press any key to continue.")
         case 3:
             os.system('cls')
             pass
