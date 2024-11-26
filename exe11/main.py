@@ -1,4 +1,4 @@
-from ourpackage import consultado, vesliño, piadozo, andaya
+from ourpackage import consultado, vesliño, piadozo, barcelos, andaya
 import os
 
 
@@ -47,10 +47,11 @@ while True:
             input("Press any key to continue.")
         case 4:
             os.system('cls')
-            andaya.display_table()
+            barcelos.current_time()
             input("Press any key to continue.")
         case 5:
             os.system('cls')
-            pass
+            andaya.display_table()
+            input("Press any key to continue.")
         case _:
             print("Invalid choice.")
