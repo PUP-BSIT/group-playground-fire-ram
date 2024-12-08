@@ -1,4 +1,4 @@
-from ourpackages import barcelos
+from ourpackages import barcelos, veslino
 
 print("(1) Kevin Joseph V. Barcelos")
 print("(2) Marc D. Veslino")
