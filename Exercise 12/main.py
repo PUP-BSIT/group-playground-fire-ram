@@ -11,7 +11,6 @@ user_choice = int(input("Enter your choice: "))
 
 match(user_choice):
     case 1:
-        os.system('cls')
         barcelos.kevin()
     case 2:
         pass
