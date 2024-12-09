@@ -7,9 +7,10 @@ def edriane():
         print ("1. Who am I ?")
         print ("2. What's your thought to me as a teammate :>")
         print ("3. Rate my function")
-        print ("4. Exit")
+        print ("4. Comment Teeammate - Kevin")
+        print ("0. Exit")
         user_choice = int(input("Enter your choice of number: "))
-        if user_choice == 4:
+        if user_choice == 0:
             print ("Thanks B)")
             break
 
@@ -90,6 +91,8 @@ def edriane():
                   elif rate_my_module >= 0 and rate_my_module <= 4:
                        print ("k")
                        input ()
+            case 4: 
+                  print("Nice codes, Keep up the good work. :>  - Kevin")
             case _:
                 print ("Invalid choice")
     return " "
