@@ -3,15 +3,16 @@ from colorama import Fore
 
 def kevin():
     while True:
-        print(Fore.LIGHTYELLOW_EX + "\nHello everyone! I am Kevin Joseph V. Barcelos")
-        print(Fore.LIGHTGREEN_EX + "1. Basic Information")
+        os.system('cls')
+        print(Fore.YELLOW + "\nHello everyone! I am Kevin Joseph V. Barcelos")
+        print(Fore.WHITE + "1. Basic Information")
         print("2. Goals")
         print("3. To Do List (Mini task :>)")
         print("4. Comment from teammate 1")
         print("0. To go back")
         menu_choice = int(input("Enter your choice: "))
         print(Fore.RESET)
-# Ito pang reset  Pwede kung irereeset mo din. Parang sa c++ lang
+
         match(menu_choice):
             case 1:
                 os.system('cls')
@@ -23,16 +24,16 @@ def kevin():
                 input("\nPress Enter to continue.")
             case 2:
                 os.system('cls')
-                print(Fore.LIGHTYELLOW_EX + "\n Goals")
+                print(Fore.RED + "\n Goals")
                 print("\nLong Term Goals: ")
-                print("1. Finish College.")
+                print(Fore.LIGHTYELLOW_EX + "1. Finish College.")
                 print("2. Get a job.'")
                 print("3. Invest in assests.")
                 print("4. Get a house.")
                 print("5. Fall in love.")
 
-                print("\nShort Term Goals: ")
-                print("1. Study Python.")
+                print(Fore.RED + "\nShort Term Goals: ")
+                print(Fore.LIGHTYELLOW_EX + "1. Study Python.")
                 print("2. Pass this semester with good grades.")
                 print("3. Learn Data Analyst Skills.")
                 print("4. Get a part time job.")
@@ -79,7 +80,7 @@ def to_do_list():
     tasks = []
     while True:
         os.system('cls')
-        print("\nTo-Do List Menu:")
+        print(Fore.YELLOW + "\nTo-Do List Menu:")
         print("1. Add a Task")
         print("2. View Tasks")
         print("3. Mark Task as Done")
@@ -88,17 +89,22 @@ def to_do_list():
 
         match (choice):
             case 1:
+                print(Fore.GREEN)
                 add_task(tasks)
                 input("\nPress Enter to continue. ")
             case 2:
+                print(Fore.GREEN)
                 view_tasks(tasks)
                 input("\nPress Enter to continue. ")
             case 3:
+                print(Fore.GREEN)
                 mark_task_done(tasks)
                 input("\nPress Enter to continue. ")
 
             case 4:
+                print(Fore.YELLOW)
                 print("Goodbye!")
                 break
             case _:
+                print(Fore.YELLOW)
                 print("Invalid choice. Please try again.")
