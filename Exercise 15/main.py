@@ -1,4 +1,4 @@
-from ourpackage import piadozo
+from ourpackage import piadozo, consultado
 import os
 
 UNSET_OPTION = " "
@@ -29,7 +29,7 @@ def process_choice (user_choice):
             piadozo.CardGame.menu()
             input()
         case '2':
-            pass
+            consultado.Customer.menu()
             input()
         case '3':
             pass
