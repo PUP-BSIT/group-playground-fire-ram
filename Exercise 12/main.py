@@ -20,5 +20,6 @@ match user_choice:
         pass
     case 5:
         piadozo.edriane()
-    
+    case _:
+        print ("Invalid choice")
     
