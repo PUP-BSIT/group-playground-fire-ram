@@ -1,3 +1,4 @@
+from ourpackage import piadozo
 import os
 
 UNSET_OPTION = " "
@@ -25,7 +26,7 @@ def display_choice ():
 def process_choice (user_choice):
     match user_choice:
         case '1':
-            pass
+            piadozo.CardGame.menu()
             input()
         case '2':
             pass
@@ -40,6 +41,6 @@ def process_choice (user_choice):
             pass
             input()
         case _:
-            print ("Invalid choice")
+            return
 
 menu ()
