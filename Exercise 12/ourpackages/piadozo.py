@@ -4,12 +4,13 @@ import random
 def edriane():
     while True:
         os.system('cls')
+        print ("Your Teammate :)")
         print ("1. Who am I ?")
         print ("2. What's your thought to me as a teammate :>")
         print ("3. Rate my function")
-        print ("4. Comment Teeammate - Kevin")
         print ("0. Exit")
         user_choice = int(input("Enter your choice of number: "))
+
         if user_choice == 0:
             print ("Thanks B)")
             break
@@ -24,6 +25,7 @@ def edriane():
                     print ("e. Word of Wisdom    f"". Dream")
                     print ("g. Exit")
                     know_me = input("Enter your choice: ")
+                    
                     if know_me == "g":
                          print ("Thank you B)")
                          break
@@ -91,8 +93,8 @@ def edriane():
                   elif rate_my_module >= 0 and rate_my_module <= 4:
                        print ("k")
                        input ()
-            case 4: 
-                  print("Nice codes, Keep up the good work. :>  - Kevin")
             case _:
                 print ("Invalid choice")
     return " "
+
+edriane()
