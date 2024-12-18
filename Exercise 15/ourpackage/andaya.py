@@ -34,12 +34,12 @@ class MySelf:
         self.location = new_location
         return f"Your location has been updated to {self.location}."
 
-    def menu(self):
+    def menu():
         os.system("cls")
         choice = UNSET_OPTION
         while choice != EXIT_OPTION:
-            choice = self.display_get_choice()
-            self.process_choice(choice)
+            choice = person_1.display_get_choice()
+            person_1.process_choice(choice)
             os.system("cls")
     
     def display_get_choice(self):
@@ -89,4 +89,3 @@ class MySelf:
                 input("\nPlease press enter key to continue...")
 
 person_1 = MySelf(name="Gener", age=20, location="Parañaque City, Philippines")
-person_1.menu()
