@@ -1,4 +1,4 @@
-from ourpackage import piadozo, consultado, andaya
+from ourpackage import piadozo, consultado, andaya, barcelos
 import os
 
 UNSET_OPTION = " "
@@ -33,10 +33,8 @@ def process_choice (user_choice):
             input()
         case '3':
             andaya.MySelf.menu()
-            input()
         case '4':
-            pass
-            input()
+            barcelos.Continent.menu()
         case '5':
             pass
             input()
