@@ -4,7 +4,7 @@ import os
 UNSET_OPTION = " "
 EXIT_OPTION = "0"
 
-def main_menu():
+def menu():
     user_choice = UNSET_OPTION
     while user_choice != EXIT_OPTION:
         user_choice = display_choice()
@@ -38,4 +38,4 @@ def process_choice (user_choice):
         case _:
             return
         
-main_menu()
+menu()
