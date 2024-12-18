@@ -1,10 +1,10 @@
-from ourpackage import piadozo, consultado, andaya, barcelos
+from ourpackage import piadozo, consultado, andaya, barcelos, veslino
 import os
 
 UNSET_OPTION = " "
 EXIT_OPTION = "0"
 
-def menu ():
+def main_menu():
     user_choice = UNSET_OPTION
     while user_choice != EXIT_OPTION:
         user_choice = display_choice()
@@ -27,18 +27,15 @@ def process_choice (user_choice):
     match user_choice:
         case '1':
             piadozo.CardGame.menu()
-            input()
         case '2':
             consultado.Customer.menu()
-            input()
         case '3':
             andaya.MySelf.menu()
         case '4':
             barcelos.Continent.menu()
         case '5':
-            pass
-            input()
+            veslino.Movie.menu()
         case _:
             return
-
-menu ()
+        
+main_menu()
